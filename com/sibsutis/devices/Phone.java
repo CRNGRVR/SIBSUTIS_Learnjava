@@ -21,4 +21,21 @@ public class Phone extends Devices
     {
         return "";
     }
+
+    public boolean equals(PersonalComputer instance)
+    {
+        if (this.getId() == instance.getId() && 
+            this.getPrice() == instance.getPrice() &&
+            this.getIp() == instance.getIp())
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public int hashCode()
+    {
+        return this.getId() + this.getPrice() + (this.getIp().hashCode() * 31);
+    }
 }
