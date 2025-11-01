@@ -22,7 +22,7 @@ public class Phone extends Devices
         return "";
     }
 
-    public boolean equals(PersonalComputer instance)
+    public boolean equals(Phone instance)
     {
         if (this.getId() == instance.getId() && 
             this.getPrice() == instance.getPrice() &&
