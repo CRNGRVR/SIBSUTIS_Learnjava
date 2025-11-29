@@ -1,6 +1,6 @@
 package com.bookstore.models;
 
-public class Book
+public abstract class Book
 {
     String title;
     String author;
@@ -8,6 +8,7 @@ public class Book
     double volume;
     double price;
     int code;
+    String publisher;
 
     public Book(String title, String author, double mass, double volume,
                 double price, int code)
@@ -46,5 +47,13 @@ public class Book
     public String toString()
     {
         return title + " " + author;
+    }
+
+    abstract String getCategoryDescription();
+    abstract String getSpecificDetails();
+
+    double calculateDiscount(double discountRate)
+    {
+        return 0;
     }
 }
